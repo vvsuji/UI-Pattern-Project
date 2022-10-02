@@ -13,7 +13,6 @@ body {
 article.card {
   width: 225px;
   border-radius: 1em;
-  /* padding: 5px; */
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -31,8 +30,8 @@ article.card:hover {
 
 .cardImg {
   height: 100%;
-  border-radius: inherit;
   width: 100%;
+  border-radius: inherit;
 }
 
 .container {
