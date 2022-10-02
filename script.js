@@ -18,7 +18,6 @@ fetch(url)
         console.log(champName);
         let champTitle = document.querySelector('#champ-title').innerText;
         champTitle = champions[i][1].title;
-        console.log(champions[i][1].title);
         let champDesc = document.querySelector('#champ-desc').innerText;
         champDesc = champions[i][1].blurb;
         let champSplash = document.querySelector('#champ-splash');
