@@ -50,12 +50,22 @@ article.card:hover {
   margin: auto;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-guts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #modal {
@@ -68,8 +78,9 @@ article.card:hover {
   box-shadow: -5px 0px 29px 9px rgba(50, 50, 50, 0.66);
   padding: 0.7em;
   border-radius: 8px;
-  margin: 20vh 5em;
+  margin: 10vh 14.7em;
   display: flex;
+  width: 725px;
 }
 #champ-name,
 #champ-type,
@@ -84,13 +95,9 @@ article.card:hover {
 }
 
 #champ-splash {
+  margin-top: 3px;
   border-radius: 15px;
   padding-right: 5px;
+  width: 700px;
+  height: 400px;
 }
-
-/* @media only screen (max-width: 200px) {
-  #champ-splash {
-    width: auto;
-    height: auto;
-  }
-} */
