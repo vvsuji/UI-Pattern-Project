@@ -18,7 +18,7 @@ fetch(url)
         const champTitle = document.querySelector('#champ-title');
         champTitle.innerText = champions[i][1].title;
         const champType = document.querySelector('#champ-type');
-        champType.innerText = champions[i][1].tags;
+        champType.innerText = champions[i][1].tags.join(`, `);
         const champDesc = document.querySelector('#champ-desc');
         champDesc.innerText = champions[i][1].blurb;
         const champSplash = document.querySelector('#champ-splash');
