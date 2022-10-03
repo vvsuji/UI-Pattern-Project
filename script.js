@@ -13,28 +13,30 @@ fetch(url)
 
       img.id = i;
       img.addEventListener('click', (e) => {
-        let champName = document.querySelector('#champ-name').innerText;
-        champName = champions[e.target.id][0];
-        console.log(champName);
-        let champTitle = document.querySelector('#champ-title').innerText;
-        champTitle = champions[i][1].title;
-        let champDesc = document.querySelector('#champ-desc').innerText;
-        champDesc = champions[i][1].blurb;
-        let champSplash = document.querySelector('#champ-splash');
+        const champName = document.querySelector('#champ-name');
+        champName.innerText = champions[e.target.id][0];
+        console.log(champName.innerText);
+        const champTitle = document.querySelector('#champ-title');
+        champTitle.innerText = champions[i][1].title;
+        const champDesc = document.querySelector('#champ-desc');
+        champDesc.innerText = champions[i][1].blurb;
+        const champSplash = document.querySelector('#champ-splash');
         champSplash.src = `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champions[i][0]}_0.jpg`;
-        document.querySelector('#modal').style.display = 'block';
+        const modal = document.querySelector('.modal-container');
+        modal.style.visibility = 'visible';
       });
-      document
-        .querySelector('#modal')
-        .addEventListener(
-          'click',
-          () => (document.querySelector('#modal').style.display = 'none'),
-        );
-
       const card = document.createElement('article');
       card.classList.add('card');
       card.appendChild(img);
       container.appendChild(card);
     }
+    document
+      .querySelector('.modal-container')
+      .addEventListener(
+        'click',
+        () =>
+          (document.querySelector('.modal-container').style.visibility =
+            'hidden'),
+      );
   })
   .catch((err) => console.error(err));
