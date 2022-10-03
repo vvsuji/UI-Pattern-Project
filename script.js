@@ -15,9 +15,10 @@ fetch(url)
       img.addEventListener('click', (e) => {
         const champName = document.querySelector('#champ-name');
         champName.innerText = champions[e.target.id][0];
-        console.log(champName.innerText);
         const champTitle = document.querySelector('#champ-title');
         champTitle.innerText = champions[i][1].title;
+        const champType = document.querySelector('#champ-type');
+        champType.innerText = champions[i][1].tags;
         const champDesc = document.querySelector('#champ-desc');
         champDesc.innerText = champions[i][1].blurb;
         const champSplash = document.querySelector('#champ-splash');

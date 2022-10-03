@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'League Spartan', sans-serif;
   color: black;
   background-color: rgb(84, 120, 122);
 }
@@ -72,30 +72,25 @@ article.card:hover {
   display: flex;
 }
 #champ-name,
+#champ-type,
 #champ-title {
   text-align: center;
-}
-
-#champ-close {
-  color: rgb(29, 29, 29);
-  float: right;
-  font-size: 28px;
   font-weight: bold;
-  text-decoration: none;
-}
-
-#champ-close:hover,
-#champ-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 #champ-desc {
   padding-left: 5px;
+  font-size: 20px;
 }
 
 #champ-splash {
   border-radius: 15px;
   padding-right: 5px;
 }
+
+/* @media only screen (max-width: 200px) {
+  #champ-splash {
+    width: auto;
+    height: auto;
+  }
+} */
