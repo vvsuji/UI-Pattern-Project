@@ -30,13 +30,8 @@ fetch(url)
       card.appendChild(img);
       container.appendChild(card);
     }
-    document
-      .querySelector('.modal-container')
-      .addEventListener(
-        'click',
-        () =>
-          (document.querySelector('.modal-container').style.visibility =
-            'hidden'),
-      );
+    document.querySelector('.modal-container').addEventListener('click', () => {
+      document.querySelector('.modal-container').style.visibility = 'hidden';
+    });
   })
   .catch((err) => console.error(err));
