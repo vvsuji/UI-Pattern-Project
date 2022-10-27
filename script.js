@@ -1,15 +1,17 @@
-const url = `http://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json`;
+const url = `https://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json`;
 
 const container = document.querySelector('.container');
 
 fetch(url)
   .then((response) => response.json())
   .then((res) => {
+    const champNames = Object.keys(res.data);
     const champions = Object.entries(res.data);
+    console.log(champions);
     for (let i = 0; i < champions.length; i++) {
       const img = document.createElement('img');
       img.classList.add('cardImg');
-      img.src = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champions[i][0]}_0.jpg`;
+      img.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champions[i][0]}_0.jpg`;
 
       img.id = i;
       img.addEventListener('click', (e) => {
@@ -22,7 +24,7 @@ fetch(url)
         const champDesc = document.querySelector('#champ-desc');
         champDesc.innerText = champions[i][1].blurb;
         const champSplash = document.querySelector('#champ-splash');
-        champSplash.src = `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champions[i][0]}_0.jpg`;
+        champSplash.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champions[i][0]}_0.jpg`;
         const modal = document.querySelector('.modal-container');
         modal.style.visibility = 'visible';
       });
